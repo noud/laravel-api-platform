@@ -6,7 +6,7 @@ This Laravel PHP package is [code generation](http://en.wikipedia.org/wiki/Code_
 
 The resulting back end is partly API-Platform compatible so there front end [client generator component](http://api-platform.com/docs/client-generator) works.
 
-* [REST](http://en.wikipedia.org/wiki/REST)
+* [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) [REST](http://en.wikipedia.org/wiki/REST)
     * [JSON](http://en.wikipedia.org/wiki/JSON)
         * [Swagger](http://swagger.io) [OpenAPI](http://swagger.io/resources/open-api)
             * [React](http://reactjs.org)
