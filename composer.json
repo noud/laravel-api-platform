@@ -1,0 +1,55 @@
+{
+    "name": "noud/laravel-api-platform",
+    "require": {
+        "php": ">=7.2.5",
+        "agontuk/schema-builder": "dev-master",
+        "appointer/swaggervel": "dev-master",
+        "arbee/laravel-hydra": "dev-config",
+        "doctrine/dbal": "~2.3",
+        "doctrine/inflector": "dev-master",
+        "fruitcake/laravel-cors": "^2.0",
+        "infyomlabs/laravel-generator": "^7.0",
+        "infyomlabs/swagger-generator": "dev-master"
+    },
+    "description": "Laravel package conform API-Platform",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Noud de Brouwer",
+            "email": "noud4@home.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "API\\Platform\\": "src/app/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "API\\Platform\\Providers\\APIPlatformServiceProvider"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../schema-builder"
+        },
+        {
+            "type": "path",
+            "url": "../inflector"
+        },
+        {
+            "type": "path",
+            "url": "../laravel-hydra"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@github.com:InfyOmLabs/swaggervel.git"
+        }
+    ]
+}
