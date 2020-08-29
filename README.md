@@ -2,7 +2,7 @@
 
 This Laravel PHP package is [code generation](http://en.wikipedia.org/wiki/Code_generation_(compiler)) from ER model to [API](http://en.wikipedia.org/wiki/API) [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) [back end](http://en.wikipedia.org/wiki/Front_end_and_back_end).
 
-## Generated [API-Platform](http://api-platform.com) compatible front ends
+## Generate [API-Platform](http://api-platform.com) compatible front ends
 
 The resulting back end is partly API-Platform compatible so there front end [client generator component](http://api-platform.com/docs/client-generator) works.
 
