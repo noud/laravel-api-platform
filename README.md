@@ -1,6 +1,6 @@
 # [front end](http://en.wikipedia.org/wiki/Front_end_and_back_end)s from [ER model](http://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model)
 
-This Laravel PHP package is [code generation](http://en.wikipedia.org/wiki/Code_generation_(compiler)) from ER model to [Swagger](http://swagger.io) [OpenAPI](http://swagger.io/resources/open-api) [API](http://en.wikipedia.org/wiki/API) [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) [back end](http://en.wikipedia.org/wiki/Front_end_and_back_end).
+This Laravel PHP package is [code generation](http://en.wikipedia.org/wiki/Code_generation_(compiler)) from ER model to [API](http://en.wikipedia.org/wiki/API) [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) [back end](http://en.wikipedia.org/wiki/Front_end_and_back_end).
 
 ## Generated [API-Platform](http://api-platform.com) compatible front ends
 
