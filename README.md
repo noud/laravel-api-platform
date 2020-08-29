@@ -12,7 +12,7 @@ The resulting back end is partly API-Platform compatible so there front end [cli
             * [React](http://reactjs.org)
                 * [CRA](http://create-react-app.dev)
                     <!-- - [React-Admin](http://marmelab.com/react-admin) [example](http://github.com/noud/react-admin-openapi/blob/master/README.md) -->
-                    - [Redux](http://redux.js.org) [PWA](http://en.wikipedia.org/wiki/Progressive_web_applications), [mobile app example](http://github.com/noud/react-redux-openapi-politie/blob/master/README.md)
+                    - [Redux](http://redux.js.org) [PWA](http://en.wikipedia.org/wiki/Progressive_web_applications) [example](http://github.com/noud/react-redux-openapi-politie/blob/master/README.md)
                 <!-- - [Next.js](http://nextjs.org) [Express](http://expressjs.com) [front end example](http://github.com/noud/react-next-express-openapi/blob/master/README.md) -->
             <!-- - [Vue.js](http://vuejs.org) [Single-page application (SPA)](http://en.wikipedia.org/wiki/Single-page_application), [web application or site example](http://github.com/noud/vue-openapi/blob/master/README.md) -->
 
