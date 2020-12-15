@@ -32,6 +32,7 @@ Export Laravel databases migrations
 ```
 # install generator
 php artisan infyom:publish
+php artisan vendor:publish --provider="Appointer\Swaggervel\SwaggervelServiceProvider"
 # install swaggervel
 php artisan vendor:publish --tag=public
 php artisan vendor:publish --tag=config
