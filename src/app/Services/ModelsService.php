@@ -33,7 +33,7 @@ class ModelsService
 
         $commands = [];
         foreach ($results as $tableName) {
-            $tableName = $tableName->table_name;
+            $tableName = $tableName->TABLE_NAME;
             if (!in_array($tableName, ["failed_jobs", "jobs", "migrations", "password_resets", "tables", "users"])) {
                 $table = Table::firstWhere(['name' => $tableName]);
 
