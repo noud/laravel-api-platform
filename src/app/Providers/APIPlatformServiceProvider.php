@@ -2,7 +2,7 @@
 
 namespace API\Platform\Providers;
 
-use API\Platform\Console\Commands\Generate;
+use API\Platform\Console\Commands\GenerateCommand;
 use Illuminate\Support\ServiceProvider;
 
 class APIPlatformServiceProvider extends ServiceProvider
@@ -11,7 +11,7 @@ class APIPlatformServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                Generate::class,
+                GenerateCommand::class,
             ]);
         }
 

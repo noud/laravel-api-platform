@@ -5,7 +5,7 @@ namespace API\Platform\Console\Commands;
 use API\Platform\Services\ModelsService;
 use Illuminate\Console\Command;
 
-class Generate extends Command
+class GenerateCommand extends Command
 {
     /**
      * The name and signature of the console command.
