@@ -30,15 +30,25 @@ Import in React.js Entity-relationship diagram front end
 Export Laravel databases migrations
 
 ```
+# install generator
+php artisan infyom:publish
+# install swaggervel
+php artisan vendor:publish --tag=public
+php artisan vendor:publish --tag=config
+php artisan vendor:publish --tag=views
+# migrate database
 php artisan migrate
+# generate Models and Swagger API end-points
 php artisan api-platform:generate
+# generate Entity Relationship Diagram
+php artisan generate:erd
 ```
 
 ## Depends on packages
 
 * [CORS Middleware for Laravel](https://github.com/fruitcake/laravel-cors)
 * [InfyOm Laravel Generator](http://github.com/infyomlabs/laravel-generator)
-    * [Swagger Generator](http://github.com)
+    * [Swagger Generator](http://github.com/infyomlabs/swagger-generator)
 * [Laravel/Lumen schema builder](http://github.com/Agontuk/schema-builder)
 
 # [📁 Portfolio](http://github.com/noud/portfolio#portfolio-repositories-index)
