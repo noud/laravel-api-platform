@@ -49,6 +49,7 @@ php artisan generate:erd
 * [CORS Middleware for Laravel](https://github.com/fruitcake/laravel-cors)
 * [InfyOm Laravel Generator](http://github.com/infyomlabs/laravel-generator)
     * [Swagger Generator](http://github.com/infyomlabs/swagger-generator)
+* [Swaggervel](http://github.com/appointer/swaggervel)
 * [Laravel/Lumen schema builder](http://github.com/Agontuk/schema-builder)
 
 # [📁 Portfolio](http://github.com/noud/portfolio#portfolio-repositories-index)
