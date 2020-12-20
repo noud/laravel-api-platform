@@ -2,13 +2,11 @@
     "name": "noud/laravel-api-platform",
     "require": {
         "php": ">=7.2.5",
-        "agontuk/schema-builder": "dev-master",
-        "appointer/swaggervel": "dev-master",
-        "arbee/laravel-hydra": "dev-config",
+        "appointer/swaggervel": "dev-develop-8.x",
         "doctrine/dbal": "~2.3",
-        "doctrine/inflector": "dev-master",
-        "fruitcake/laravel-cors": "^2.0",
-        "infyomlabs/laravel-generator": "^7.0",
+        "doctrine/inflector": "dev-dutch",
+        "fruitcake/laravel-cors": "dev-develop-8.x",
+        "infyomlabs/laravel-generator": "dev-develop-8.x",
         "infyomlabs/swagger-generator": "dev-master"
     },
     "description": "Laravel package conform API-Platform",
@@ -37,19 +35,19 @@
     "repositories": [
         {
             "type": "path",
-            "url": "../schema-builder"
-        },
-        {
-            "type": "path",
             "url": "../inflector"
         },
         {
             "type": "path",
-            "url": "../laravel-hydra"
+            "url": "../laravel-cors"
         },
         {
-            "type": "vcs",
-            "url":  "git@github.com:InfyOmLabs/swaggervel.git"
+            "type": "path",
+            "url": "../laravel-generator"
+        },
+        {
+            "type": "path",
+            "url": "../swaggervel"
         }
     ]
 }
