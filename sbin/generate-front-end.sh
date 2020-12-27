@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
-npx @api-platform/client-generator http://localhost/api src/ --resource Afbeelding  --format swagger
+# npx browserslist --update-db
 
-node_modules/.bin/generate-api-platform-client http://localhost/docs src/ --format swagger
+npx @api-platform/client-generator http://laravel.localhost/docs src/ --format swagger --resource adres
+
+# node_modules/.bin/generate-api-platform-client http://laravel.localhost/docs src/ --format swagger

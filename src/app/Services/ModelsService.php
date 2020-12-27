@@ -20,7 +20,7 @@ class ModelsService
         $this->ormService = $ormService;
     }
 
-    public function generateAll(): void
+    public function generateAll(string $api = null): void
     {
         // SELECT table_name FROM information_schema.tables WHERE table_schema = 'your_database_name';
 
@@ -33,14 +33,18 @@ class ModelsService
 
         $commands = [];
         foreach ($results as $tableName) {
-            $tableName = $tableName->table_name;
+            $tableName = $tableName->TABLE_NAME;
+
             if (!in_array($tableName, ["failed_jobs", "jobs", "migrations", "password_resets", "tables", "users"])) {
                 $table = Table::firstWhere(['name' => $tableName]);
 
                 $modelName = $this->ormService->tableToClass($table, $tableName);
-                dump($modelName);
 
-                $commands[] = 'php artisan infyom:api ' . $modelName . ' -n --fromTable --tableName=' . $tableName;
+                $command = 'php artisan infyom:api ' . $modelName . ' -n --fromTable --tableName=' . $tableName;
+                if ($api) {
+                    $command .= ' --prefix=' . $api;
+                }
+                $commands[] = $command;
                 // @todo barfs on $modelName
                 // $exitCode = Artisan::call('infyom:api', [
                 //     $modelName => true,
