@@ -39,6 +39,10 @@
         },
         {
             "type": "path",
+            "url": "../flash"
+        },
+        {
+            "type": "path",
             "url": "../laravel-cors"
         },
         {
