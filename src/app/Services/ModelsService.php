@@ -40,7 +40,7 @@ class ModelsService
 
                 $modelName = $this->ormService->tableToClass($table, $tableName);
 
-                $command = 'php artisan infyom:api ' . $modelName . ' -n --fromTable --tableName=' . $tableName;
+                $command = 'php artisan infyom:api ' . $modelName . ' --paginate=10 -n --fromTable --tableName=' . $tableName;
                 if ($api) {
                     $command .= ' --prefix=' . $api;
                 }
