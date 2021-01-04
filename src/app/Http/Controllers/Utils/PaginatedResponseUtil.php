@@ -4,6 +4,8 @@ namespace API\Platform\Http\Controllers\Utils;
 
 class PaginatedResponseUtil
 {
+    const FIRST_PAGE = 0;
+
     /**
      * @param string $message
      * @param mixed  $data
@@ -18,12 +20,12 @@ class PaginatedResponseUtil
             // 'hydra:last' => '/politiebureaus/?page=' . $lastPage,
             'hydra:last' => '?page=' . $lastPage,
         ];
-        if (1 < $page) {
+        if (self::FIRST_PAGE < $page) {
             $previousPage = $page - 1;
             $paginator['hydra:previous'] = '?page=' . $previousPage;
 
         }
-        if (1 <= $page && $lastPage > $page) {
+        if (self::FIRST_PAGE <= $page && $lastPage > $page) {
             $nextPage = $page + 1;
             $paginator['hydra:next'] = '?page=' . $nextPage;
 
@@ -32,7 +34,7 @@ class PaginatedResponseUtil
             'success' => true,
             'data' => $data,
             // 'hydra:member' => $data,
-            "hydra:totalItems" => $limit,
+            "hydra:totalItems" => $total,
             'hydra:view' => $paginator,
             'message' => $message,
         ];
