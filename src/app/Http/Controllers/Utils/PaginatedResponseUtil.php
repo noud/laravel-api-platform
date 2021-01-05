@@ -23,7 +23,8 @@ class PaginatedResponseUtil
         $lastPage = $pagesAsInt + $frontEndDiff;
         $pageString = '/' . $model . '?page=';
         $paginator = [
-            '@id' => $pageString . $frontEndPage,
+            // @todo uncomment no paginator in front end
+            // '@id' => $pageString . $frontEndPage,
             '@type' => 'hydra:PartialCollectionView',
             'hydra:first' => '/' . $model . '/',
             'hydra:last' => $pageString . $lastPage,
