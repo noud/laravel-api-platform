@@ -4,7 +4,7 @@ namespace API\Platform\Http\Controllers\Utils;
 
 class PaginatedResponseUtil
 {
-    const FIRST_PAGE = 0;
+    const FIRST_PAGE = 1;
 
     /**
      * @param string $message
@@ -14,19 +14,25 @@ class PaginatedResponseUtil
      */
     public static function makePaginatedResponse($message, $data, $total, $limit, $model, $page)
     {
-        $lastPage = floor($total / $limit);
+        $frontEndDiff = 1;
+        $frontEndPage = $page + $frontEndDiff;
+        $pagesAsInt = floor($total / $limit);
+        if ($pagesAsInt == $total / $limit) {
+            $pagesAsInt -= 1;
+        }
+        $lastPage = $pagesAsInt + $frontEndDiff;
         $paginator = [
             'hydra:first' => '/' . $model . '/',
             // 'hydra:last' => '/politiebureaus/?page=' . $lastPage,
             'hydra:last' => '?page=' . $lastPage,
         ];
-        if (self::FIRST_PAGE < $page) {
-            $previousPage = $page - 1;
+        if (self::FIRST_PAGE < $frontEndPage) {
+            $previousPage = $frontEndPage - 1;
             $paginator['hydra:previous'] = '?page=' . $previousPage;
 
         }
-        if (self::FIRST_PAGE <= $page && $lastPage > $page) {
-            $nextPage = $page + 1;
+        if (self::FIRST_PAGE <= $frontEndPage && $lastPage > $frontEndPage) {
+            $nextPage = $frontEndPage + 1;
             $paginator['hydra:next'] = '?page=' . $nextPage;
 
         }
