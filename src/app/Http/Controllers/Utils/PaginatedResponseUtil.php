@@ -21,25 +21,26 @@ class PaginatedResponseUtil
             $pagesAsInt -= 1;
         }
         $lastPage = $pagesAsInt + $frontEndDiff;
+        $pageString = '/' . $model . '?page=';
         $paginator = [
+            '@id' => $pageString . $frontEndPage,
+            '@type' => 'hydra:PartialCollectionView',
             'hydra:first' => '/' . $model . '/',
-            // 'hydra:last' => '/politiebureaus/?page=' . $lastPage,
-            'hydra:last' => '?page=' . $lastPage,
+            'hydra:last' => $pageString . $lastPage,
         ];
         if (self::FIRST_PAGE < $frontEndPage) {
             $previousPage = $frontEndPage - 1;
-            $paginator['hydra:previous'] = '?page=' . $previousPage;
+            $paginator['hydra:previous'] = $pageString . $previousPage;
 
         }
         if (self::FIRST_PAGE <= $frontEndPage && $lastPage > $frontEndPage) {
             $nextPage = $frontEndPage + 1;
-            $paginator['hydra:next'] = '?page=' . $nextPage;
+            $paginator['hydra:next'] = $pageString . $nextPage;
 
         }
         return [
             'success' => true,
             'data' => $data,
-            // 'hydra:member' => $data,
             "hydra:totalItems" => $total,
             'hydra:view' => $paginator,
             'message' => $message,
