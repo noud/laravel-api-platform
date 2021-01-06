@@ -6,11 +6,11 @@ The resulting back end is partly API-Platform compatible so there front end [cli
 
 * [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer) [REST](http://en.wikipedia.org/wiki/REST)
     * [JSON](http://en.wikipedia.org/wiki/JSON)
-        * [Swagger](http://swagger.io) [OpenAPI](http://swagger.io/resources/open-api)
+        * [Swagger](http://swagger.io)
             * [React](http://reactjs.org)
                 * [CRA](http://create-react-app.dev)
                     <!-- - [React-Admin](http://marmelab.com/react-admin) [example](http://github.com/noud/react-admin-openapi/blob/master/README.md) -->
-                    - [Redux](http://redux.js.org) [PWA](http://en.wikipedia.org/wiki/Progressive_web_applications) [example](http://github.com/noud/react-redux-openapi-politie/blob/master/README.md)
+                    - [Redux](http://redux.js.org) [PWA](http://en.wikipedia.org/wiki/Progressive_web_applications) [demo](http://github.com/noud/react-swagger-api-platform-demo)
                 <!-- - [Next.js](http://nextjs.org) [Express](http://expressjs.com) [front end example](http://github.com/noud/react-next-express-openapi/blob/master/README.md) -->
             <!-- - [Vue.js](http://vuejs.org) [Single-page application (SPA)](http://en.wikipedia.org/wiki/Single-page_application), [web application or site example](http://github.com/noud/vue-openapi/blob/master/README.md) -->
 
